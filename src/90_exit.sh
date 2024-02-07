@@ -10,6 +10,7 @@ get_standup_message() {
         exit 1
     fi
 
+    echo 
     echo $standupMessage
 
 }; get_standup_message
