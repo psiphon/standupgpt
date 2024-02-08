@@ -2,7 +2,7 @@
 get_standup_message() {
     local githubStandup=`get_github_info`
     local linearStandup=`get_linear_info`
-    local standupRequestText=$(printf "Over the last 24 hours,\n%s\n%s" "$githubStandup" "$linearStandup")
+    local standupRequestText=$(printf "Over the last ${HOURS} hours,\n%s\n%s" "$githubStandup" "$linearStandup")
 
     standupMessage=`get_chatgpt_message "$standupRequestText"`
     if [ $? -ne 0 ]; then
@@ -11,7 +11,7 @@ get_standup_message() {
     fi
 
     echo 
-    echo $standupMessage
+    echo "$standupMessage"
 
 }; get_standup_message
 

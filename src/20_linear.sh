@@ -34,7 +34,7 @@ get_linear_userid() {
   fi
   
   $VERBOSE && echo "  User id: $userId" >&2
-  echo $userId
+  echo "$userId"
 }
 
 get_linear_info() {
@@ -128,5 +128,5 @@ get_linear_info() {
         standupText+=$(echo -n "I did not comment, create, or get assigned any issues today. ")
     fi
 
-    echo $standupText
+    echo "$standupText"
 }

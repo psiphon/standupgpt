@@ -25,7 +25,7 @@ get_github_info() {
     fi
 
     if [ "$commitCount" -eq 0 ]; then
-        echo "No commits in the last 24 hours" >&2
+        echo "No commits in the last ${HOURS} hours" >&2
         rm -f .commits
         exit 0
     fi

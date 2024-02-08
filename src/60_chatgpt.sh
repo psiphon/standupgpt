@@ -47,6 +47,6 @@ get_chatgpt_message() {
       exit 1
   fi
 
-  echo $gptContent
+  echo "$gptContent"
 }
 
